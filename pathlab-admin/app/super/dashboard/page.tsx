@@ -20,7 +20,7 @@ function SuperAdminDashboard() {
             <div className="flex h-full w-full">            
                 <div className="flex-grow bg-gray-100 p-6">
                     <div className='flex justify-between items-center'>
-                    <h1 className="text-3xl font-bold mb-6">Organizations</h1> <RoundedBtn text='Organisation' className='bg-blue-700 text-green-500' onClick={()=>console.log("clicked")} ></RoundedBtn>
+                    <h1 className="text-3xl font-bold mb-6">Organizations</h1> <RoundedBtn className='bg-blue-700 text-green-500 dark:bg-dark-primary-200 dark:text-dark-primary-900' onClick={()=>console.log("clicked")} >Organisation</RoundedBtn>
                     </div>
                     <div className="bg-white shadow rounded-lg p-4">
                         <h2 className="text-xl font-semibold mb-4">Total Organizations: {organizations.length}</h2>

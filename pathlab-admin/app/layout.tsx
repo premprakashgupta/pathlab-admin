@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
 import "./styles/globals.css";
 import { ToastProvider } from "./toast";
+import { ThemeProvider } from "./themeProvider";
 
 interface Props {
   readonly children: ReactNode;
@@ -13,9 +14,12 @@ export default function RootLayout({ children }: Props) {
   return (
     <StoreProvider>
       <ToastProvider>
+        <ThemeProvider>
       <html lang="en">
         <body>{children}</body>
       </html>
+
+        </ThemeProvider>
       </ToastProvider>
     </StoreProvider>
   );
