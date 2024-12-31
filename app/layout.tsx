@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // layout.tsx (RootLayout)
 import { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
@@ -12,15 +12,14 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <StoreProvider>
-      <ToastProvider>
-        <ThemeProvider>
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-
-        </ThemeProvider>
-      </ToastProvider>
-    </StoreProvider>
+    <html lang="en">
+      <body>
+        <StoreProvider>
+          <ToastProvider>
+            <ThemeProvider>{children}</ThemeProvider>
+          </ToastProvider>
+        </StoreProvider>
+      </body>
+    </html>
   );
 }
