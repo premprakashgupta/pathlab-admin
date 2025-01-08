@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        // btnBgPrimary: "var(--btn-bg-primary)",
+        // btnBgSecondary: "var(--btn-bg-secondary)",
+        // textClrPrimary: "var(--text-clr-primary)",
+        // textClrSecondary: "var(--text-clr-secondary)",
       },
     },
   },
