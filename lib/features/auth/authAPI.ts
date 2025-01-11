@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const login = async (email: string, password: string, loginAgent: string, deviceId: string) => {
   const response = await axios.post(
-    `${BASE_URL}/auth/v1/login`, 
+    `${BASE_URL}/auth/login`, 
     { email, password, loginAgent, deviceId },
     {
       headers: {
@@ -19,7 +19,7 @@ export const login = async (email: string, password: string, loginAgent: string,
 
 export const fetchUserApi = async () => {
   const response = await axios.get(
-    `${BASE_URL}/auth/v1/me`, 
+    `${BASE_URL}/auth/me`, 
     {
       headers: {
         "Content-Type": "application/json",  // Ensures the server knows you're sending JSON

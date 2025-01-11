@@ -1,1 +1,1 @@
-export const BASE_URL= process.env.NEXT_PUBLIC_NODE_ENV === "local" ? `http://localhost:5000/api`:`http://localhost:5000/api`
+export const BASE_URL= process.env.NEXT_PUBLIC_NODE_ENV === "local" ? `http://localhost:5000`:`http://localhost:5000`

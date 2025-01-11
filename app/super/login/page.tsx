@@ -106,7 +106,7 @@ const Login = (props: Props) => {
                                     </div>
                                     <Link href="/super/forget-password" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</Link>
                                 </div>
-                                <button type="submit" disabled={apiStatus==='loading'} className="w-full text-white bg-light-primary-600 hover:bg-light-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-dark-primary-600 dark:hover:bg-dark-primary-700 dark:focus:ring-dark-primary-800 flex justify-center items-center gap-3"> <Image width={20} height={20} src={loaderGif} alt='loader' className={`${apiStatus==='loading' ? "block":"hidden"}`} />  {apiStatus==="loading"?"wait...":"Sign in"}</button>
+                                <button type="submit" disabled={apiStatus==='loading'} className="w-full text-white bg-blue-600 hover:bg-light-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-dark-primary-600 dark:hover:bg-dark-primary-700 dark:focus:ring-dark-primary-800 flex justify-center items-center gap-3"> <Image width={20} height={20} src={loaderGif} alt='loader' className={`${apiStatus==='loading' ? "block":"hidden"}`} />  {apiStatus==="loading"?"wait...":"Sign in"}</button>
                                 
                             </form>
                         </div>

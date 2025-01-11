@@ -3,7 +3,8 @@ import axios from 'axios';
 import { BASE_URL } from '@/config/config';
 
 export async function middleware(req: NextRequest) {
-    const token = req.cookies.get('token'); // Extract the token from cookies
+    const token = req.cookies.get('access_token'); // Extract the token from cookies
+    console.log(req.cookies.get('access_token'))
     const url = req.nextUrl.clone();
     const pathArray=['/super/dashboard']
     console.log("super middleware")
@@ -14,7 +15,7 @@ export async function middleware(req: NextRequest) {
         if (token) {
             try {
                 // Call /auth/me to validate the token
-                const response = await axios.get(`${BASE_URL}/auth/v1/me`,{headers: {
+                const response = await axios.get(`${BASE_URL}/auth/me`,{headers: {
                     "Content-Type":"application/json","Cookie":`${token.name}=${token.value}`
                 }, withCredentials: true,});
                 console.log(response.data)

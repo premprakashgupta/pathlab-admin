@@ -1,5 +1,5 @@
 // src/toast/ToastContainer.tsx
-
+"use client"
 import React from "react";
 import { useToast } from "./ToastContext";
 import SuccessToast from "./SuccessToast";
