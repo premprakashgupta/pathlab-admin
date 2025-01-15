@@ -9,10 +9,15 @@ export type ToastType = "success" | "error" | "info";
 // Define the context and the toast data structure
 interface ToastContextType {
   showToast: (message: string, type: ToastType) => void;
-  toasts: { id: number; message: string; type: ToastType }[];
+  toasts: { id: string; message: string; type: ToastType }[]; // Change id type to string
 }
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
+
+// Custom function to generate a unique ID
+const generateUniqueId = () => {
+  return Math.random().toString(36).substr(2, 9); // Random string of length 9
+};
 
 export const useToast = () => {
   const context = useContext(ToastContext);
@@ -24,18 +29,16 @@ export const useToast = () => {
 
 export const ToastProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [toasts, setToasts] = useState<
-    { id: number; message: string; type: ToastType }[]
+    { id: string; message: string; type: ToastType }[] // Adjust type to string for id
   >([]);
 
   const showToast = (message: string, type: ToastType) => {
-    console.log(message)
-    const id = Date.now();
+    const id = generateUniqueId(); // Use the custom ID generator
     setToasts((prevToasts) => [
       ...prevToasts,
       { id, message, type }
     ]);
-    console.log({ id, message, type })
-    console.log(toasts)
+
     // Automatically remove the toast after 5 seconds
     setTimeout(() => {
       setToasts((prevToasts) =>

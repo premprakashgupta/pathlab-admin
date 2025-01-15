@@ -1,11 +1,13 @@
+"use client"
 import Image from "next/image";
 import Dashboard from "./components/dev/Dashboard";
+import OrganisationList from "./components/dev/OrganisationList";
 
 export default function Home() {
   return (
     <div className="">
       <main className="">
-        <Dashboard/>
+        <OrganisationList/>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a

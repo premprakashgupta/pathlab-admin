@@ -1,6 +1,6 @@
 "use client";
 
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+
 import Image from 'next/image';
 import React,{ReactNode} from 'react';
 
@@ -21,7 +21,7 @@ const FlatBtn: React.FC<Props> = ({
 }) => {
   return (
     <button
-      className={`px-5 py-2 rounded-md hover:opacity-90 flex gap-2 items-center ${className}`}
+      className={`px-2 py-2 rounded-md hover:opacity-90 flex gap-2 items-center ${className}`}
       onClick={onClick}
     >
       {prefix && prefix} 

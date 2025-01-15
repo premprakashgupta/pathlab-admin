@@ -21,7 +21,7 @@ const RoundedBtn: React.FC<Props> = ({
 }) => {
   return (
     <button
-      className={`px-5 py-2 rounded-full hover:opacity-90 shadow-md flex gap-2 items-center ${className}`}
+      className={`px-2 py-2 rounded-full hover:opacity-90 shadow-md flex gap-2 items-center ${className}`}
       onClick={onClick}
     >
       {prefix && prefix} 

@@ -23,8 +23,8 @@ type Props = {
 const HomeCard = (props: Props) => {
   
   return (
-    <div className='bg-white p-3 rounded-md shadow-md w-full'>
-        <div className='flex justify-between items-center p-2 gap-1'>
+    <div className='bg-white p-3 rounded-md shadow-md w-full h-full'>
+        <div className='flex w-full justify-between items-center p-2 gap-1'>
             <div className='flex items-center gap-2'>
                 <div className='text-sm'>{props.data.title}</div>
                 <BiInfoCircle size={17} className='text-gray-400'/>
@@ -32,13 +32,13 @@ const HomeCard = (props: Props) => {
             <FlatBtn onClick={()=>console.log("Card click")} className='bg-transparent text-xs border border-black'  >See Details</FlatBtn>
         </div>
 
-        <div className='flex gap-2 items-center justify-start mt-4'>
+        <div className='flex w-full gap-2 items-center justify-start mt-4'>
             <BsPerson size={17} className='text-gray-400 border border-gray-400 rounded-sm p-[2px]' />
             <div className='text-5xl font-bold'>{props.data.totalCount}</div>
             <div className='bg-green-300 text-green-600 font-bold text-xs p-1 rounded-sm'>+{props.data.increament}</div>
         </div>
         <div className='mt-4 flex flex-col justify-center items-center gap-2'>
-          <div className='w-full'>
+          <div className='w-full h-full'>
 
           <CustomChart data={props.data.chartData} />
           
